@@ -12,7 +12,7 @@
 	$.fn.sticky = function(note, options, callback) 
 		{
 		// Default settings
-		var position = 'top-right'; // top-left, top-right, bottom-left, or bottom-right
+		var position = 'top-center'; // top-left, top-right, bottom-left, or bottom-right
 		
 		var settings =
 			{
@@ -57,7 +57,7 @@
 			{
 			// Building and inserting sticky note
 			$('.sticky-queue').prepend('<div class="sticky border-' + position + '" id="' + uniqID + '"></div>');
-			$('#' + uniqID).append('<img src="close.png" class="sticky-close" rel="' + uniqID + '" title="Close" />');
+			$('#' + uniqID).append('<img src="/images/sticky_close-g.png" class="sticky-close" rel="' + uniqID + '" title="Close" />');
 			$('#' + uniqID).append('<div class="sticky-note" rel="' + uniqID + '">' + note + '</div>');
 			
 			// Smoother animation
